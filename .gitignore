@@ -1,7 +1,0 @@
-bin
-ndk_root
-resource
-sysroot
-a.out
-android-ndk*
-tests/build_termux_app/termux-app

@@ -5,10 +5,10 @@ on:
     inputs:
       ndk_version:
         required: true
-        default: '28'
+        default: '29'
       llvm_version:
         required: true
-        default: '19.1.7'
+        default: '20.1.3'
 
 jobs:
   make:
@@ -87,7 +87,3 @@ jobs:
         replacesArtifacts: true
         body: |
           [action](${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}})
-
-    - uses: zongou/run-vscode-server@0.0.3
-      name: Open VS Code server to Handle Failure (Run on any failure)
-      if: ${{ failure() }}
